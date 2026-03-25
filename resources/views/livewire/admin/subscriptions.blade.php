@@ -4,34 +4,28 @@
         <div
             class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5">
             <div class="flex justify-between items-start">
-                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Registered</p>
-                <span class="material-symbols-outlined text-primary">group</span>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Total Subscription</p>
             </div>
             <div class="flex items-baseline gap-2">
                 <p class="text-slate-900 dark:text-white text-3xl font-bold">24,502</p>
-                <p class="text-primary text-sm font-semibold">+12%</p>
             </div>
         </div>
         <div
             class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5">
             <div class="flex justify-between items-start">
-                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Currently Active</p>
-                <span class="material-symbols-outlined text-primary">bolt</span>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Today New</p>
             </div>
             <div class="flex items-baseline gap-2">
                 <p class="text-slate-900 dark:text-white text-3xl font-bold">1,208</p>
-                <p class="text-primary text-sm font-semibold">+5.4%</p>
             </div>
         </div>
         <div
             class="flex flex-col gap-2 rounded-xl p-6 border border-slate-200 dark:border-white/10 bg-white dark:bg-white/5">
             <div class="flex justify-between items-start">
-                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">Restricted Access</p>
-                <span class="material-symbols-outlined text-red-500">block</span>
+                <p class="text-slate-500 dark:text-slate-400 text-sm font-medium">This Month</p>
             </div>
             <div class="flex items-baseline gap-2">
                 <p class="text-slate-900 dark:text-white text-3xl font-bold">432</p>
-                <p class="text-red-500 text-sm font-semibold">-2.1%</p>
             </div>
         </div>
     </div>
@@ -46,25 +40,7 @@
                     class="w-full bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg py-3 pl-12 pr-4 text-slate-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-transparent transition-all outline-none"
                     placeholder="Search by username, email, or wallet ID" type="text" />
             </div>
-            <div class="flex flex-wrap gap-2">
-                <button
-                    class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg text-sm font-medium hover:border-primary transition-colors">
-                    <span class="material-symbols-outlined text-sm">filter_list</span>
-                    All Status
-                    <span class="material-symbols-outlined text-sm">expand_more</span>
-                </button>
-                <button
-                    class="flex items-center gap-2 px-4 py-3 bg-white dark:bg-white/5 border border-slate-200 dark:border-white/10 rounded-lg text-sm font-medium hover:border-primary transition-colors">
-                    <span class="material-symbols-outlined text-sm">calendar_month</span>
-                    Joined: Last 30 Days
-                    <span class="material-symbols-outlined text-sm">expand_more</span>
-                </button>
-                <button
-                    class="flex items-center gap-2 px-4 py-3 bg-slate-200 dark:bg-white/10 rounded-lg text-sm font-medium hover:bg-primary/20 transition-all">
-                    <span class="material-symbols-outlined text-sm">download</span>
-                    Export
-                </button>
-            </div>
+
         </div>
     </div>
     <!-- Users Table -->
@@ -79,20 +55,26 @@
                             User</th>
                         <th
                             class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                            Registration Date</th>
+                            Plan</th>
                         <th
                             class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                            Wallet Balance</th>
+                            Start Date</th>
                         <th
                             class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
+                            End Date</th>
+                        <th
+                            class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">
                             Status</th>
                         <th
                             class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">
-                            Actions</th>
+                            Payment ID</th>
+                        <th
+                            class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider text-right">
+                            Payment Amount</th>
                     </tr>
                 </thead>
                 <tbody class="divide-y divide-slate-200 dark:divide-white/10">
-                    @foreach ($this->susbscriptions as $subscription)
+                    @foreach ($this->subscriptions as $subscription)
                         <tr class="hover:bg-slate-50 dark:hover:bg-white/[0.02] transition-colors group">
                             <td class="px-6 py-4">
                                 <div class="flex items-center gap-3">
@@ -116,6 +98,12 @@
                                     <span class="w-1.5 h-1.5 rounded-full bg-red-600"></span>
                                     Active
                                 </span>
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">
+                                {{ $subscription->payment_id }}
+                            </td>
+                            <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">
+                                {{ $subscription->payment_amount }}
                             </td>
                             <td class="px-6 py-4 text-right">
                                 <button class="text-slate-400 hover:text-primary transition-colors">

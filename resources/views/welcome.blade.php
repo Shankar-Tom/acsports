@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
-    <title>{{ $title ?? '' }} - {{ config('app.name') }}</title>
+    <title>{{ $title ?? 'Home' }} - {{ config('app.name') }}</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
     <link
@@ -85,7 +85,7 @@
                         <span class="material-symbols-outlined text-sm">workspace_premium</span> Premium Sports Insights
                     </div>
                     <h1 class="text-5xl md:text-7xl font-black text-white leading-tight tracking-tight mb-6">
-                        Winning <span class="text-primary italic">Starts</span> Here
+                        Winning <span class="text-primary  ">Starts</span> Here
                     </h1>
                     <p class="text-slate-400 text-lg md:text-xl max-w-2xl mx-auto mb-10 leading-relaxed">
                         Experience the ultimate sports betting edge with expert precision, data-driven insights, and
@@ -127,7 +127,7 @@
                 </div>
             </section>
             <!-- Live Ticker Component -->
-            <div class="bg-primary/5 border-y border-primary/10 py-3 overflow-hidden whitespace-nowrap">
+            {{-- <div class="bg-primary/5 border-y border-primary/10 py-3 overflow-hidden whitespace-nowrap">
                 <div
                     class="flex animate-marquee gap-8 items-center text-xs font-bold tracking-wider text-primary uppercase">
                     <span>NFL: Chiefs -3.5 (L) vs Lions • </span>
@@ -137,7 +137,172 @@
                     <span>UFC: Jones by Submission • </span>
                     <span class="text-slate-300">NFL: Chiefs -3.5 (L) vs Lions • </span>
                 </div>
-            </div>
+            </div> --}}
+            <section class="px-6 py-24 lg:px-20 bg-background-dark">
+                <div class="flex justify-between items-end pb-4">
+                    <h2 class="text-2xl font-black   uppercase tracking-tighter">OLD <span
+                            class="text-primary">PREDICTIONS</span></h2>
+                    <a class="text-[10px] font-bold uppercase tracking-widest text-slate-400 hover:text-primary transition-colors"
+                        href="#">VIEW ARCHIVE</a>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Prediction Card 1 -->
+                    <div
+                        class="bg-surface-container-low border border-outline hover:border-primary/50 transition-all duration-300 group overflow-hidden relative">
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">22 OCT 2023
+                                    • PREMIER LEAGUE</span>
+                                <span
+                                    class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-black uppercase tracking-tighter   border border-emerald-500/20">WON</span>
+                            </div>
+                            <h3 class="text-xl font-black  uppercase tracking-tight">ARSENAL VS LIVERPOOL</h3>
+                            <div class="flex justify-between items-center py-4 border-y border-outline/50">
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">TIP</p>
+                                    <p class="font-black   text-primary">OVER 2.5 GOALS</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">ODDS</p>
+                                    <p class="text-lg font-black  ">1.85</p>
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-white transition-colors"
+                                href="#">
+                                VIEW ANALYSIS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Prediction Card 2 -->
+                    <div
+                        class="bg-surface-container-low border border-outline hover:border-primary/50 transition-all duration-300 group overflow-hidden relative">
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">21 OCT 2023
+                                    • NBA REGULAR</span>
+                                <span
+                                    class="px-2 py-0.5 bg-primary/10 text-primary text-[10px] font-black uppercase tracking-tighter   border border-primary/20">LOST</span>
+                            </div>
+                            <h3 class="text-xl font-black   uppercase tracking-tight">LAKERS VS NUGGETS</h3>
+                            <div class="flex justify-between items-center py-4 border-y border-outline/50">
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">TIP</p>
+                                    <p class="font-black   text-primary">LEBRON 30+ PTS</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">ODDS</p>
+                                    <p class="text-lg font-black  ">2.10</p>
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-white transition-colors"
+                                href="#">
+                                VIEW ANALYSIS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Prediction Card 3 -->
+                    <div
+                        class="bg-surface-container-low border border-outline hover:border-primary/50 transition-all duration-300 group overflow-hidden relative">
+                        <div class="p-6 space-y-4">
+                            <div class="flex justify-between items-start">
+                                <span class="text-[10px] font-bold uppercase tracking-widest text-slate-500">20 OCT
+                                    2023 • UFC 294</span>
+                                <span
+                                    class="px-2 py-0.5 bg-emerald-500/10 text-emerald-400 text-[10px] font-black uppercase tracking-tighter   border border-emerald-500/20">WON</span>
+                            </div>
+                            <h3 class="text-xl font-black   uppercase tracking-tight">MAKHACHEV VS VOLKANOVSKI
+                            </h3>
+                            <div class="flex justify-between items-center py-4 border-y border-outline/50">
+                                <div>
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">TIP</p>
+                                    <p class="font-black   text-primary">KO/TKO ROUND 1</p>
+                                </div>
+                                <div class="text-right">
+                                    <p class="text-[10px] font-bold uppercase tracking-widest text-slate-500">ODDS</p>
+                                    <p class="text-lg font-black  ">4.50</p>
+                                </div>
+                            </div>
+                            <a class="flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest text-primary hover:text-white transition-colors"
+                                href="#">
+                                VIEW ANALYSIS <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Latest News Bento Grid -->
+            <section class="px-6 py-24 lg:px-20 bg-background-dark">
+                <div class="flex items-end bg-background-dark pb-4">
+                    <h2 class="text-2xl font-black uppercase tracking-tighter text-primary">LATEST <span
+                            class="text-on-background">NEWS</span></h2>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-4 grid-rows-2 gap-4 h-auto md:h-[600px]">
+                    <!-- Featured News -->
+                    <div
+                        class="md:col-span-2 md:row-span-2 relative group overflow-hidden rounded-lg bg-surface-container border border-outline">
+                        <img alt="Featured News"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Atmospheric shot of a racing car on a track at dusk with bright red taillight streaks and motion blur"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5PAFjS3PHgwTyq35klp01I7247t10dWVXkAlx8O2e27ufkzYU5JaYocKy48HINa0GNwSRXxJq7PFPtZSeqFLOoWGrm1rseTI7YeOaQLqy9KDc-CC55ufDRbnT85ZzNoVznYN4tTUMDOoAcIpPy3nkasdsJvdlQGIubTK9YjebsyeZq0o_A-uDk6-mEM9elUNzbMEtvRY8bfuumVVqc6IpS0g75xPGrDZmtq2CtFl3OFOF4pusKrQJ63JDoq5kHwNDQCmg7cFSxPXy" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 p-8 space-y-4">
+                            <span
+                                class="bg-primary px-3 py-1 text-[10px] font-black   uppercase tracking-widest">BREAKING</span>
+                            <h3 class="text-3xl font-black   uppercase tracking-tighter leading-tight">THE
+                                EVOLUTION OF F1 BETTING STRATEGIES IN 2024</h3>
+                            <p class="text-slate-400 text-sm line-clamp-2">How technical data feeds are changing the
+                                way high-stakes players approach the podium finish...</p>
+                        </div>
+                    </div>
+                    <!-- Secondary News 1 -->
+                    <div
+                        class="md:col-span-2 relative group overflow-hidden rounded-lg bg-surface-container border border-outline">
+                        <img alt="News Item"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Top down view of a basketball court with dramatic shadows and a single glowing red basketball in the center"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWNYv9gMfzlC1lQOq5OW4FBAcQQuNxtGIykuAr4GW9iIDlrMUzFS68NYdbl8wmB9BFwoHCMKQBAposZzmvIGwQvKPcfDJ0MPD6W7_48wRAXOVblkP6MhF3--UhWLKnWn7pz9QYKEOIFCXyfUlSnT0k1ihFg3GTq1TZzCw7jp15ys8asH50dllsrqJaVum66wQEDMnD3CE6qkFOppR52MfdSwUxES39fbazkg15j8E-MtUGy3raK1arcqenrKnhOfIkVt_81aBNYoTM" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 p-6">
+                            <span
+                                class="text-primary text-[10px] font-black   uppercase tracking-widest">INSIGHTS</span>
+                            <h4 class="text-xl font-black   uppercase tracking-tight">NBA MID-SEASON DATA DUMP
+                            </h4>
+                        </div>
+                    </div>
+                    <!-- Secondary News 2 -->
+                    <div
+                        class="md:col-span-1 relative group overflow-hidden rounded-lg bg-surface-container border border-outline">
+                        <img alt="News Item"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="Close up of a professional tennis racket hitting a ball with intense focus and sparks of energy"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzhCVfBynilK4kilLqZqOvLYiHL96nYs0o2z6n6PCgPAq-2eV8zI2sYMk7Y_ng1JVJ7Bp864-8sHdpbZIuc4fYXmiErFClzZ2h6JvcO75-VvSXhxP0ZfTqwZsSs9WfZnLdknDhIQFpVw07Jq0-ha8P8HZK11iv1szgWjd5D0NmFbieS2p9AdRaid0VC1Dmbbk_KF-Eb1zSUOHl9pXH-XpOn5Dy_VBx9ZeQnOL5rS3Zkup8mJ4YUwUbX6IK7q38WRv0v1sU9jdXD9t9" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 p-6">
+                            <h4 class="text-lg font-black   uppercase tracking-tight">TENNIS OPEN PREVIEW</h4>
+                        </div>
+                    </div>
+                    <!-- Secondary News 3 -->
+                    <div
+                        class="md:col-span-1 relative group overflow-hidden rounded-lg bg-surface-container border border-outline">
+                        <img alt="News Item"
+                            class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                            data-alt="High speed photo of horse racing with dirt flying and jockeys in intense competition during a sunset race"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoeqzT5NW5EXFh4flUVn1it7IhyECGBk4wsJH_nc1SJTjv_9aNamvIq4dSi8uOz1VQL3F-itLn2J8TuhPvVoOCTeWpy356A5yiJaqaXlEvjjg_ZpFOJuiH406B7vRYdfpO45h4Gx9HAlxPiel_3jFRXZXu-io642oSr6JmxHkKptyWWNMuw2lDn6ZnMx4OxludNVDL1hADNFf8N1mBkmUpuqUH6Zsr7LBAtQGHLPLJlQR_YZjXxVzk_X1m8IbGGuT3ZZsvas2klfug" />
+                        <div
+                            class="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent">
+                        </div>
+                        <div class="absolute bottom-0 p-6">
+                            <h4 class="text-lg font-black   uppercase tracking-tight">DERBY DAY ODDS</h4>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <!-- Features Section -->
             <section class="px-6 py-24 lg:px-20 bg-background-dark">
                 <div class="max-w-7xl mx-auto">
@@ -164,7 +329,8 @@
                                 professionals with decades of combined experience in line movement analysis.</p>
                             <ul class="space-y-3">
                                 <li class="flex items-center gap-2 text-sm text-slate-300"><span
-                                        class="material-symbols-outlined text-primary text-sm">check_circle</span> Daily
+                                        class="material-symbols-outlined text-primary text-sm">check_circle</span>
+                                    Daily
                                     VIP Slates</li>
                                 <li class="flex items-center gap-2 text-sm text-slate-300"><span
                                         class="material-symbols-outlined text-primary text-sm">check_circle</span> Prop
@@ -327,15 +493,14 @@
             <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
                 <div class="col-span-1 md:col-span-2">
                     <div class="flex items-center gap-3 mb-6">
-                        <img alt="AC Sports Pics Logo" class="h-8 w-auto"
-                            data-alt="AC Sports Pics red logo footer version"
-                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBoEL7A3gjxp81vaMFVUuvaj0XoAmK6wHqViBOnGntaAWWaGCK0HiSN9wG5ENh3n6Z7E6erJrfFck62E9lPZFxXVCNu0sN_k5g2TEn9eljPqUaUJk0QZd4ATCqDgrnzi36IChWgV87V72Wc8ohCSUyK5Wi7lQFCYjHup-G8QCHDB39YQO6HQrmmrK2kosSQ-7MXagYjBVx4Mc5tWT_Go1UqQJnVOfqBI4dbQ-YFQCRMq3N0b06EEwVhl18WTGyShdQIQffwlKjwPT6" />
-                        <span class="text-xl font-bold text-white">AC SPORTS PICS</span>
+                        <img alt="AC Sports Pics Logo" class="h-20 w-auto"
+                            data-alt="AC Sports Pics red logo footer version" src="{{ asset('images/logo.png') }}" />
+
                     </div>
-                    <p class="max-w-md mb-8 leading-relaxed">
+                    {{-- <p class="max-w-md mb-8 leading-relaxed">
                         The world's most trusted sports betting advisory. We leverage advanced analytics and
                         boots-on-the-ground intelligence to deliver winning picks daily.
-                    </p>
+                    </p> --}}
                     <div class="flex gap-4">
                         <a class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary transition-colors"
                             href="#"><span
@@ -364,7 +529,6 @@
                         <li><a class="hover:text-primary transition-colors" href="#">Predictions</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">News Feed</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">Pricing Plans</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
                     </ul>
                 </div>
                 <div>
@@ -372,17 +536,13 @@
                     <ul class="space-y-3">
                         <li><a class="hover:text-primary transition-colors" href="#">Terms of Service</a></li>
                         <li><a class="hover:text-primary transition-colors" href="#">Privacy Policy</a></li>
-                        <li><a class="hover:text-primary transition-colors" href="#">Responsible Gaming</a></li>
                     </ul>
                 </div>
             </div>
             <div
                 class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
-                <p class="text-sm">© 2024 AC Sports Pics. All rights reserved.</p>
-                <div class="flex items-center gap-6 text-xs grayscale opacity-50">
-                    <span>MUST BE 21+ TO BET</span>
-                    <span>GAMBLING PROBLEM? CALL 1-800-GAMBLER</span>
-                </div>
+                <p class="text-sm">All Rights Reserved by Cromp IT Solutions</p>
+
             </div>
         </footer>
     </div>

@@ -17,7 +17,7 @@ class Plans extends Component
     #[Computed()]
     public function plans()
     {
-        return Plan::latest()->paginate(2);
+        return Plan::latest()->paginate();
     }
 
     public function savePlan()
@@ -61,6 +61,8 @@ class Plans extends Component
 
     public function render()
     {
-        return view('livewire.admin.plans');
+        return view('livewire.admin.plans', [
+            'counts' => Plan::selectRaw('COUNT(*) as total, SUM(is_active) as active, SUM(!is_active) as inactive')->first(),
+        ]);
     }
 }

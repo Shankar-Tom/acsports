@@ -80,9 +80,7 @@
                         <th
                             class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                             Registration Date</th>
-                        <th
-                            class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
-                            Wallet Balance</th>
+                     
                         <th
                             class="px-6 py-4 text-xs font-bold text-slate-500 dark:text-slate-400 uppercase tracking-wider">
                             Status</th>
@@ -108,7 +106,6 @@
                             </td>
                             <td class="px-6 py-4 text-sm text-slate-600 dark:text-slate-400">
                                 {{ $user->created_at->format('d M y') }}</td>
-                            <td class="px-6 py-4 text-sm font-medium text-slate-900 dark:text-white">$1,450.00</td>
                             <td class="px-6 py-4">
                                 <span
                                     class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-xs font-bold text-primary bg-red-600/10">

@@ -11,7 +11,7 @@ class Subscriptions extends Component
     #[\Livewire\Attributes\Computed]
     public function subscriptions()
     {
-        return \App\Models\Subscription::paginate(10);
+        return \App\Models\Subscription::paginate();
     }
 
     public function render()
